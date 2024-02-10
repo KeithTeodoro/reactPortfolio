@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lineThrough {
+  position: relative;
+  z-index: 1;
+}
+
+.lineThrough::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 110%;
+  height: 4px;
+  background-image: linear-gradient(to right, #6a84df, #6f63ff, #4759ff);
+  z-index: -1;
+}
+
+h1 {
+  line-height: 0.9;
+  margin: 0px;
+  padding: 0px;
+}
+
+.image {
+  background-image: url(assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
